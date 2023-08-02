@@ -1,15 +1,25 @@
 import './App.css';
-import GetCategories from './Categories';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Categories from './useCategories';
 
-
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity,
+      cacheTime: Infinity,
+    },
+  },
+});
 
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <div className="App">
       <table className='gameTable'>
-        <GetCategories />
+        <Categories />
       </table>
     </div>
+    </QueryClientProvider>
   );
 }
 
