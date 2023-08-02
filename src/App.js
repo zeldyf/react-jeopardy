@@ -1,6 +1,6 @@
+import Categories from './Categories';
 import './App.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Categories from './useCategories';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,9 +15,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
     <div className="App">
-      <table className='gameTable'>
         <Categories />
-      </table>
     </div>
     </QueryClientProvider>
   );
