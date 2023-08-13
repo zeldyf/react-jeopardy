@@ -9,7 +9,7 @@ const fetchCategories = async ({queryKey}) => {
         throw new Error(`Fetch not ok: ${count}, ${offset}`)
     };
 
-    return response.json()
+    return response.json();
 };
 
 export default fetchCategories;

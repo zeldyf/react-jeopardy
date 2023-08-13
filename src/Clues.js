@@ -1,2 +1,0 @@
-// import GetCategories from "./Categories";
-

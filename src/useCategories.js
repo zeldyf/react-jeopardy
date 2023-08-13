@@ -1,8 +1,13 @@
-// import { useQuery } from '@tanstack/react-query';
-// import fetchCategories from './fetchCategories';
+import fetchCategories from "./fetchCategories";
+import { useQuery } from "@tanstack/react-query";
 
-// export default function useCategories({count, offset}){
-//   const results = useQuery(["category", {count, offset}], fetchCategories);
+export default function useCategories (){
+    const params = {
+        count: 100,
+        offset: Math.floor(Math.random() * (500 - 1) + 1),
+    };    
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const results = useQuery(["category", params], fetchCategories);
 
-//   return [results?.data ?? [], results.status]
-// };
+    return [results?.data ?? [], results.status];
+}
