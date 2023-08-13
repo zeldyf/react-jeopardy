@@ -13,7 +13,7 @@ const CategorySelect = () => {
             <Gameboard categories={_.sampleSize(results.filter(category => category.clues_count >= numClues), numCategories)}/>
         ) : 
         <div className="loading-pane">
-                <h2 className="loader">❓</h2>
+                <h2 className="loader">?</h2>
         </div>
     )
 }

@@ -9,7 +9,7 @@ const Clues = ({ id }) => {
     if (status !== "success") {
         return (
             <div className="loading-pane">
-                <h2 className="loader">❓</h2>
+                <h2 className="loader">?</h2>
             </div>
         )
     }

@@ -27,7 +27,9 @@ function App() {
           }>{button}</button>
         {showBoard ? (
           <CategorySelect />
-        ) : null
+        ) : (
+          <div className='jeopardy'>JEOPARDY!</div>
+        )
         }
       </div>
     </QueryClientProvider>
