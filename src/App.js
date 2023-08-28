@@ -8,10 +8,10 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: Infinity,
       cacheTime: Infinity,
-      retry: false
     },
   },
 });
+
 
 function App() {
   const [showBoard, setShowBoard] = useState(false);

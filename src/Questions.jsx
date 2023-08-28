@@ -6,7 +6,8 @@ const Questions = ({ categories }) => {
             categories.map((category, i) => {
                 return (
                     <tr key={i} id={i}>
-                        <Clues id={category.id}/>                
+                        <Clues id={category.id}>
+                        </Clues>                
                     </tr>
                 )
             }

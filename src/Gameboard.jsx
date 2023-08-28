@@ -4,7 +4,6 @@ import Questions from "./Questions";
 
 const Gameboard = ({ categories }) => {
     console.log(categories);
-
     return (
         categories ? (
             <div className="gameboard">
